@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>2020 Election Results Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div class="content-container">
+    <h4> Points Unknown | 2020 Election Map     </h4>
+    <h1> There are many ways to map Election Results. </h1>
+    <h1> Here's two of them. </h1>
+    <p class="byline"> by Misha Vaid</p>
+
+    <!-- intro -->
+    <p> These maps were created with the help of <a href="https://pointsunknown.nyc/web%20mapping/mapbox/python/pandas/geopandas/2021/07/14/08A_WebmappingElectionData.html">this tutorial.</a> </p>
+
+    <!-- First map -->
+    <p> First, we have an interactive web map of the 2020 presidential election results at the state and county levels. It attempts to recreate the style used by the New York Times in their <a href="https://www.nytimes.com/interactive/2019/11/05/us/elections/results-kentucky-governor-general-election.html">election results map.</a></p>
+    <p> These maps use Mapbox GL JS as the main JavaScript library. Data Sources: <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">U.S. Census Bureau - Cartographic Boundary Files</a> and <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ">MIT Election Data + Science Lab</a></p> 
+    <p> This is a choropleth map. It allows us to see state-wide trends as well as individual county votes. </p>
+     <p style="background-color: gainsboro;"> Zoom in to see county-level data and Zoom out to see state-level data. You can also hover individual states and counties to see the number of votes. Higher opacity represents a higher vote percentage for the winning candidate. </p>
+     <div id='map'>
+        <div class='map-overlay' id='legend'></div>
+     </div>
+    <script type='text/javascript' src="map.js"></script>
+
+    <!-- Second map -->
+    <p> But choropleth maps are misleading because they seem to suggest that the vast majority of America votes Republican. But in reality, less populated areas at the center of the country tend to vote Republican and densely-populated coastal areas vote Democratic. </p>
+    <p> A graduated cylinder map does a better job at making this point. So to fix this, our second map is a graduated point map. It uses the same basemap as the example above but displays the results differently.</p>
+    <p style="background-color: gainsboro;"> Each county is a circle on this map. The size of the circle refers to the number of votes the winning candidate got. Again, you can hover over each circle to see the number of votes the winning candidate got.   </p>
+
+    <div id='map2'>
+
+        <div class='map-overlay2' id='legend2'></div>
+
+    </div>
+    <!-- <div class='map-overlay2' id='legend2'></div> -->
+    <script type='text/javascript' src="map2.js"></script>
+    </div>
+    <p> Thanks for looking at my maps! Click here to return to the home page to view more pretty maps.  </p>
+
+</body>
+
+</html>
