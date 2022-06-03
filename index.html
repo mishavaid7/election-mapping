@@ -24,7 +24,7 @@
     <p> First, we have an interactive web map of the 2020 presidential election results at the state and county levels. It attempts to recreate the style used by the New York Times in their <a href="https://www.nytimes.com/interactive/2019/11/05/us/elections/results-kentucky-governor-general-election.html">election results map.</a></p>
     <p> These maps use Mapbox GL JS as the main JavaScript library. Data Sources: <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">U.S. Census Bureau - Cartographic Boundary Files</a> and <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ">MIT Election Data + Science Lab</a></p> 
     <p> This is a choropleth map. It allows us to see state-wide trends as well as individual county votes. </p>
-     <p style="background-color: gainsboro;"> Zoom in to see county-level data and Zoom out to see state-level data. You can also hover individual states and counties to see the number of votes. Higher opacity represents a higher vote percentage for the winning candidate. </p>
+     <p style="background-color: gainsboro;"> Zoom in to see county-level data and Zoom out to see state-level data. You can also hover and click individual states and counties to see the number of votes. Higher opacity represents a higher vote percentage for the winning candidate. </p>
      <div id='map'>
         <div class='map-overlay' id='legend'></div>
      </div>
@@ -33,7 +33,7 @@
     <!-- Second map -->
     <p> But choropleth maps are misleading because they seem to suggest that the vast majority of America votes Republican. But in reality, less populated areas at the center of the country tend to vote Republican and densely-populated coastal areas vote Democratic. </p>
     <p> A graduated cylinder map does a better job at making this point. So to fix this, our second map is a graduated point map. It uses the same basemap as the example above but displays the results differently.</p>
-    <p style="background-color: gainsboro;"> Each county is a circle on this map. The size of the circle refers to the number of votes the winning candidate got. Again, you can hover over each circle to see the number of votes the winning candidate got.   </p>
+    <p style="background-color: gainsboro;"> Each county is a circle on this map. The size of the circle refers to the number of votes the winning candidate got. Again, you can hover and click each circle to see the number of votes the winning candidate got.   </p>
 
     <div id='map2'>
 
